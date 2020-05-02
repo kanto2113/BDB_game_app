@@ -10,7 +10,7 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res)=> {
     const username = req.body.username
     const characterName = req.body.characterName
-    const avatarUrl = req.body.avatarUrl
+    const avatarURL = req.body.avatarURL
     const level = Number(req.body.level)
     const class1 = req.body.class1
     const class2 = req.body.class2
@@ -18,7 +18,7 @@ router.route('/add').post((req, res)=> {
     const newCharacter = new Character({
         username,
         characterName,
-        avatarUrl,
+        avatarURL,
         level,
         class1,
         class2
@@ -46,7 +46,7 @@ router.route('/update/:id').post((req, res) => {
     .then(character => {
         character.username = req.body.username
         character.characterName = req.body.characterName
-        character.avatarUrl = req.body.avatarUrl
+        character.avatarURL = req.body.avatarURL
         character.level = Number(req.body.level)
         character.class1 = req.body.class1
         character.class2 = req.body.class2
