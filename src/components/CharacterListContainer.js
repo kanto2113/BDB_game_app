@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import CharacterCardContainer from './CharacterCardContainer'
-import { CharacterListContext } from  "../App"
-
+import { CharacterListContext } from './pages/Home'
 
 const CharacterListContainer = () => {
 

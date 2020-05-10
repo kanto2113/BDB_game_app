@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import TurnSelector from './TurnSelector'
-import { CharacterListContext } from '../App'
+import { CharacterListContext } from './pages/Home'
 
 const CharacterCardContainer = (props) => {
     
@@ -22,28 +22,21 @@ const CharacterCardContainer = (props) => {
     }
 
     const initiativeValueHandler = (e) => {
-
         let cloneCharacterList = [...characterList]
-
         cloneCharacterList.forEach((character) => {
-
             if(character.characterName == props.character.characterName){
                 character.initiative = e.target.value
-            }
-            character.activeTurn = false
+            }character.activeTurn = false
         })
-
         cloneCharacterList.sort((characterA, characterB) =>  characterB.initiative - characterA.initiative)
         cloneCharacterList[0].activeTurn = true
         setCharacterList(cloneCharacterList)
     }
 
     const deleteCharacterHandler = () => {
-
         let cloneCharacterList = characterList.filter((character)=>{
             return character.characterName != props.character.characterName
         })
-
         setCharacterList(cloneCharacterList)
     }
 
@@ -88,6 +81,5 @@ const CharacterCardContainer = (props) => {
         </div>
     )
 }
-
 
 export default CharacterCardContainer

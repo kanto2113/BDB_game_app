@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react'
-import { CharacterListContext } from '../App'
+import { CharacterListContext } from './pages/Home'
 
 const NewCharacterContainer = (props) => {
 
     const [ characterList, setCharacterList ] = useContext(CharacterListContext)
    
     const [ newCharacter, setNewCharacter ] = useState({
-        username: '',
+        displayName: '',
         characterName: '',
         initiative: 0, 
         avatarURL: '', 
@@ -15,20 +15,37 @@ const NewCharacterContainer = (props) => {
         class2: '',
         activeTurn: false,
     })
-   
+
+// input handlers for new character
+
     const characterNameInputHandler = (e) => {
-        
         let cloneCharacter = {...newCharacter, characterName: e.target.value}
         setNewCharacter(cloneCharacter)
     }
 
-    const createNewCharacterButton = () => {
+    const characterAvatarURLInputHandler = (e) => {
+        let cloneCharacter = {...newCharacter, avatarURL: e.target.value}
+        setNewCharacter(cloneCharacter)
+    }
 
+    const characterClass1InputHandler = (e) => {
+        let cloneCharacter = {...newCharacter, class1: e.target.value}
+        setNewCharacter(cloneCharacter)
+    }
+
+    const characterClass2InputHandler = (e) => {
+        let cloneCharacter = {...newCharacter, class2: e.target.value}
+        setNewCharacter(cloneCharacter)
+    }
+
+// create new character
+
+    const createNewCharacterButton = () => {
         let cloneCharacterList = [...props.characterList]
         cloneCharacterList.push(newCharacter)
         props.setCharacterList(cloneCharacterList)
         setNewCharacter({
-            username: '',
+            displayName: '',
             characterName: '',
             initiative: 0, 
             avatarURL: '', 
@@ -37,24 +54,6 @@ const NewCharacterContainer = (props) => {
             class2: '',
             activeTurn: false,
         })
-    }
-
-    const characterAvatarURLInputHandler = (e) => {
-
-        let cloneCharacter = {...newCharacter, avatarURL: e.target.value}
-        setNewCharacter(cloneCharacter)
-    }
-
-    const characterClass1InputHandler = (e) => {
-        
-        let cloneCharacter = {...newCharacter, class1: e.target.value}
-        setNewCharacter(cloneCharacter)
-    }
-
-    const characterClass2InputHandler = (e) => {
-        
-        let cloneCharacter = {...newCharacter, class2: e.target.value}
-        setNewCharacter(cloneCharacter)
     }
 
     return (
@@ -95,7 +94,5 @@ const NewCharacterContainer = (props) => {
         </div>
     )
 }
-
-
 
 export default NewCharacterContainer

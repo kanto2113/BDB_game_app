@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const characterSchema = new Schema ({
-    username: { type: String, required: true },
+    displayName: { type: String },
     characterName: { type: String, required: true, unique: true, trim: true },
     avatarURL: { type: String, required: true },
     level: { type: Number, required: true },

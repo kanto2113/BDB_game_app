@@ -3,17 +3,11 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const userSchema = new Schema ({
-        username: {
-            type: String,
-            required: true,
-            unique: true,
-            trim: true,
-            minlength: 3
-        },
-}, {
-    timestamps: true,
+        email: { type: String, required: true, unique: true },
+        password: { type: String, required: true, minlength: 5 },
+        displayName: { type: String },
 })
 
-const User = mongoose.model('User', userSchema)
+//shorthand for last two lines of character-model.js
 
-module.exports = User
+module.exports = User = mongoose.model('user', userSchema)

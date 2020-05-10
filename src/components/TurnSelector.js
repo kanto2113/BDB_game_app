@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {CharacterListContext} from '../App'
+import { CharacterListContext } from './pages/Home'
 
 const TurnSelector = () => {
 

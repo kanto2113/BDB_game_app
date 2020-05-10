@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 .app-container {
   box-sizing: border-box;
   background: linear-gradient(108.41deg, #85E27C 0%, rgba(255, 255, 255, 0.74) 100%), #85E27C; 
   height: 1500px;
-  font-family:  Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+  font-family:  "Montserrat", sans-serif;
 }
 
 .button {
@@ -10,6 +12,56 @@
   cursor: pointer;
 }
 
+/* NavBar */
+
+.logo {
+  cursor: pointer;
+}
+
+.nav-bar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #85E27C;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links:hover {
+  color: #0088a9
+}
+
+.nav-button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 136, 169, .6);
+}
 
 /* HEADER */
 
@@ -20,6 +72,17 @@
   top: 10px;
   left: 10px;
   font-weight: 600;
+}
+
+/* Auth Options */
+
+.input-parent {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.input {
+  text-align: center;
 }
 
 
