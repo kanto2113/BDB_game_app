@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const XPTracker = () => {
 
 
-    const [ currentXP, setCurrentXP ] = useState(54347)
+    const [ currentXP, setCurrentXP ] = useState(141000)
 
     const [ gainedXP, setGainedXP ] = useState()
 

@@ -4,7 +4,7 @@ import { CharacterListContext } from './pages/Home'
 
 const CharacterListContainer = () => {
 
-    const [ characterList, setCharacterList ] = useContext(CharacterListContext)
+    const [ characterList ] = useContext(CharacterListContext)
 
     return (
         <div className="character-list-container">

@@ -30,11 +30,6 @@ const Home = () => {
               <div className='app-header'>
                 <div>
                   <NewCharacterContainer characterList={characterList} setCharacterList={setCharacterList}/>
-                  {/* <Route path="/home/create" render={ (props) =>
-                    <CharacterListContext.Provider value={[characterList, setCharacterList]}> 
-                      <NewCharacterContainer characterList={characterList} setCharacterList={setCharacterList}/>
-                    </CharacterListContext.Provider>}
-                  /> */}
                 </div>
                 <div
                   style={{margin:"0 20px"}}>

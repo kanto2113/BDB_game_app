@@ -57,9 +57,6 @@ const CharacterCardContainer = (props) => {
                     X
                 </button>
                 {props.character.activeTurn && <TurnSelector />}
-                <div className="initiative-container">
-                    I
-                </div>
             </div>
             <div className="character-card-bottom-row" >
                 <div className="initiative-value">
@@ -68,7 +65,7 @@ const CharacterCardContainer = (props) => {
                 <button
                     onClick={showInitiativeFieldHandler}
                 >
-                    Change Initiative
+                    Init
                 </button>
                 <input
                     className="initiative-input-field"

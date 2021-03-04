@@ -73,7 +73,7 @@ const NewCharacterContainer = (props) => {
                 placeholder="Avatar URL"
             />
             <div></div>
-            <input 
+            {/* <input 
                 value = {newCharacter.class1}
                 onChange = {(e) => {characterClass1InputHandler(e)}}
                 placeholder="Primary Class"
@@ -83,7 +83,7 @@ const NewCharacterContainer = (props) => {
                 value = {newCharacter.class2}
                 onChange = {(e) => {characterClass2InputHandler(e)}}
                 placeholder="Secondary Class"
-            />                        
+            />                         */}
             <br></br>
             <button 
                 className="button"

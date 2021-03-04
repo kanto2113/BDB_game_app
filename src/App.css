@@ -93,7 +93,8 @@
   flex-direction: column;
   position: absolute;
   top: 250px;
-  left: margin
+  left: margin;
+  padding-top: 10px;
 }
 
 
@@ -117,14 +118,13 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px 0 0 0;
   justify-content: space-between;
-  margin-left: auto;
 }
 
 .character-card-name {
   text-align: center;
-  color: #2A9D20;
+  color: #f7f7f7;
 }
 
 .end-turn-button-container{
@@ -143,6 +143,7 @@
   height: 20px;
   cursor: pointer;
   transition: .3s ease-in-out;
+  margin-left: 215px;
 }
 
 .end-turn-button:hover {
@@ -180,10 +181,12 @@
   margin-top: auto;
   display: flex;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%);
+  width: 100px;
 }
 
 .initiative-input-field {
   visibility: hidden;
+  width: 50px;
 }
 
 .initiative-value {
